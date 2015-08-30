@@ -1089,7 +1089,7 @@ class Client(object):
         self.execute_command('PUBLISH', channel, message, callback=callback)
 
     def pubsub(self, subcommand, channels, callback=None):
-        self.execute_command(subcommand, channels,  callback=callback)
+        self.execute_command('PUBSUB', subcommand, channels,  callback=callback)
 
     @gen.engine
     def listen(self, callback=None, exit_callback=None):
